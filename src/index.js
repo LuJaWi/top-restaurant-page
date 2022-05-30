@@ -3,7 +3,18 @@ import Icon from './assets/pizza-box.jpeg';
 
 function navBar () {
   const element = document.createElement('div');
-  element.classList.add('nav-bar')
+
+  // Page Title
+  const pageTitle = document.createElement('h1');
+  pageTitle.classList.add('page-title')
+  pageTitle.innerText = "We Eatsa Da Pizza";
+
+  element.appendChild(pageTitle);
+  
+  const navBar = document.createElement('div');
+  navBar.classList.add('nav-bar');
+
+  element.appendChild(navBar);
 
   const homeButton = document.createElement('div');
   homeButton.classList.add('nav-button');
@@ -17,21 +28,16 @@ function navBar () {
   contactButton.classList.add('nav-button');
   contactButton.innerText = 'Contact';
 
-  element.appendChild(homeButton);
-  element.appendChild(menuButton);
-  element.appendChild(contactButton);
+  navBar.appendChild(homeButton);
+  navBar.appendChild(menuButton);
+  navBar.appendChild(contactButton);
 
   return element;
 };
 
 function homePage () {
   const element = document.createElement('div');
-
-  // Page Title
-  const pageTitle = document.createElement('h1');
-  pageTitle.innerText = "We Eatsa Da Pizza";
-
-  element.appendChild(pageTitle);
+  element.classList.add('home-page');
 
   // Page image
   const myIcon = new Image(300, 300);
