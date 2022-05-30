@@ -32,6 +32,15 @@ function navBar () {
   navBar.appendChild(menuButton);
   navBar.appendChild(contactButton);
 
+  const pageContent = document.createElement('div');
+  pageContent.classList.add('page-content');
+
+  element.appendChild(pageContent);
+
+  homeButton.addEventListener('click', () => {});
+  menuButton.addEventListener('click', () => {});
+  contactButton.addEventListener('click', () => {});
+
   return element;
 };
 
@@ -46,15 +55,22 @@ function homePage () {
   element.appendChild(myIcon);
   
   // Page Content
-  const pageContent = document.createElement('p');
-  pageContent.innerText = "Lorem Ipsum? Uhhhhh, put it on the pizza.";
+  const pageDescription = document.createElement('p');
+  pageDescription.innerText = "Lorem Ipsum? Uhhhhh, put it on the pizza.";
 
-  element.appendChild(pageContent);
+  element.appendChild(pageDescription);
 
   return element;
 };
 
-const contentDivSelector = document.getElementById('content');
+function menuPage () {
+  const element = document.createElement('div');
+  element.innerText = "Test"
+  return element;
+};
 
+const contentDivSelector = document.getElementById('content');
 contentDivSelector.appendChild(navBar());
-contentDivSelector.appendChild(homePage());
+
+const pageContentSelector = document.querySelector('.page-content');
+pageContentSelector.appendChild(homePage());
