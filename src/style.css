@@ -1,0 +1,16 @@
+body {
+  font-family: sans-serif;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-button {
+  padding: 24px;
+  background-color: red;
+  border: green solid 5px;
+  border-radius: 100%;
+  margin: auto;
+}
